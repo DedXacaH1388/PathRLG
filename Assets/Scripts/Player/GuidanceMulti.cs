@@ -27,9 +27,7 @@ public class GuidanceMulti : MonoBehaviour
                 Instantiate(bullet, shotPoint2.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
             }
-        }
-        else
-        {
+        } else {
             timeBtwShots -= Time.deltaTime;
         }
     }

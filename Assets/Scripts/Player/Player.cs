@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
         }
         #endregion
 
-        //����� ������
+        //Weapon change
         if (Input.GetAxisRaw("Mouse ScrollWheel") != 0)
         {
             SwitchWeapon();
@@ -245,6 +245,7 @@ public class Player : MonoBehaviour
                     unlockedWeapons.Add(allWeapons[i]);
                 }
             }
+            
             SwitchWeapon();
             Destroy(collision.gameObject);
         }
