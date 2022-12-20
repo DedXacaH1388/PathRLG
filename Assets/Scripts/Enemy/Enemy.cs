@@ -69,6 +69,6 @@ public class Enemy : MonoBehaviour
             d--;
         }
         Destroy(gameObject);
-        Destroy(mask);
+        // Destroy(mask);
     }
 }

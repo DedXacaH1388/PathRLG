@@ -19,16 +19,19 @@ public class LevelChange : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
     public void FadeToLevel()
     {
         anim.SetTrigger("fade");
     }
+
     public void OnFadeComplete()
     {
         playerStorage.initialValue = position;
         SceneManager.LoadScene(levelToLoad);
         StartCoroutine(LoadingScreenOnFade());
     }
+    
     IEnumerator LoadingScreenOnFade()
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelToLoad);

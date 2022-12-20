@@ -23,13 +23,13 @@ public class Enemy_Guidance : MonoBehaviour
 
     private void Update()
     {
-        //наведение
+        //AIM
         Vector3 difference = player.transform.position - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg - 180f;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
     }
 
-    //анимация + атака
+    //Animation + Attack
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -45,7 +45,7 @@ public class Enemy_Guidance : MonoBehaviour
         }
     }
 
-    //спавн пули
+    //Shot bullet
     public void OnEnemyAttack()
     {
         Instantiate(bullet, shotPoint.position, transform.rotation);
